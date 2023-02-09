@@ -1,2 +1,3 @@
 #!/bin/bash
-echo "su betty"
+user="betty"
+echo "su $user"
