@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo echo $"su betty"
+sudo su betty
