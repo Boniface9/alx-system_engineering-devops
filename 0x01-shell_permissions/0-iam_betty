@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$(su bash)"
+echo "su betty"
