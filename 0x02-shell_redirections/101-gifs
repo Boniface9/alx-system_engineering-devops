@@ -1,0 +1,2 @@
+#!/bin/bash
+find . -type f -iname '*.gif' -printf '%P\0' | sed -z 's/\.gif\0/\0/' | LC_COLLATE=C sort -z | sed -z 's/\0$//'
