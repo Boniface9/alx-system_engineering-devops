@@ -1,4 +1,8 @@
-#!/usr/bin/bash
-# Fix for the first web stack debugging_0 server 
+#!/usr/bin/env bash
 
-service apache2 start
+# Check if Apache2 is running
+if service apache2 status >/dev/null 2>&1; then
+    echo "apache2 is running"
+else
+    echo "Apache2 is not running."
+fi
