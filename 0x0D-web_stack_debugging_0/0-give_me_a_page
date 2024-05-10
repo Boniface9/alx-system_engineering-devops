@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
-# Check if Apache2 is running
-if service apache2 status >/dev/null 2>&1; then
-    echo "apache2 is running"
+# Check Apache status (adjust command based on your system)
+if systemctl status apache2 &> /dev/null; then
+  echo "apache2 is running"
 else
-    echo "Apache2 is not running."
+  echo "Apache2 is not running."
+
+  # Optional: Check for specific error messages (adapt as needed)
+  systemctl status apache2 | grep -i failed && echo "Error: Apache failed to start."
 fi
